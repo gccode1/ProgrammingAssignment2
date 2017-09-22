@@ -6,7 +6,7 @@
 makeCacheMatrix <- function(x = matrix()) {
     inv = NULL
 
-    # set function is not needed, I don't know why is it given in the assignment (while mean calculation)
+    # set function is not needed, I don't know why is it given in the assignment (In mean calculation)
     # set <- function(y){
     #     x <<- y
     #     inv <<- NULL
@@ -21,6 +21,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
+## This function return inverse of the matrix, it inverse was already calculated, then it will come from the cache, otherwise it will be calculated
 cacheSolve <- function(x, ...) {
     inv <- x$getInv()        # get inverse of the matrix
     if(!is.null(inv)){       # if inv is not null, then return inverse from the cache
